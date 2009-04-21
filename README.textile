@@ -8,13 +8,15 @@ h2. Install
   
 h2. How To Use
 
-
-Robotnik.compress do |c|
-  c.robotniks_path = "#{File.dirname(__FILE___)}/css"
-  c.css_files = {:master => Dir["/../major_*.css"], :minor => Dir["/../minor_*.css"]}
-  c.stylesheet_compression = true
-end
-
+<pre>
+  <code>
+    Robotnik.compress do |c|
+      c.robotniks_path = "#{File.dirname(__FILE___)}/css"
+      c.css_files = {:master => Dir["/../major_*.css"], :minor => Dir["/../minor_*.css"]}
+      c.stylesheet_compression = true
+    end
+  </code>
+</pre>
 
 Robotniks Path - This is where Robotnik will place its files
 
