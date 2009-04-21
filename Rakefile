@@ -5,7 +5,7 @@ begin
   gem 'technicalpickles-jeweler', '>= 0.11.0'
   require 'jeweler'
   Jeweler::Tasks.new do |s|
-    s.name = "Robotnik"
+    s.name = "robotnik"
     s.summary = %Q{Simple tool to compress/merge css and javascript files.}
     s.email = "reddavis@gmail.com"
     s.homepage = "http://github.com/reddavis/robotnik"
