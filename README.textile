@@ -4,7 +4,9 @@ Robotnik is a very simple tool for merging and compressing css (and very shortly
 
 h2. Install
 
+<pre>
   $ sudo gem install reddavis-robotnik -s http://gems.github.com/
+</pre>
   
 h2. How To Use
 
