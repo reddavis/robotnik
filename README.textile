@@ -22,18 +22,22 @@ Robotniks Path - This is where Robotnik will place its files
 
 CSS Files - This is a hash of files you want to be merged. The syntax is like so:
 
-<code>
-  c.css_files = :name_of_file_that_robotnik_will_create => %w{array of all files you would like to be merged}
-</code>
+<pre>
+  <code>
+    c.css_files = :name_of_file_that_robotnik_will_create => %w{array of all files you would like to be merged}
+  </code>
+</pre>
 
 If you would like to create a "master" css file and a "admin" css file you can do this...
 
-<code>
-  c.css_files = {
-                :master => %w{array of all files you would like to be merged},
-                :admin => %w{array of admin stylesheets}
-                }
-</code>
+<pre>
+  <code>
+    c.css_files = {
+                  :master => %w{array of all files you would like to be merged},
+                  :admin => %w{array of admin stylesheets}
+                  }
+  </code>
+</pre>
 
 
 
