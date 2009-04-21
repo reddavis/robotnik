@@ -11,7 +11,6 @@ begin
     s.homepage = "http://github.com/reddavis/robotnik"
     s.description = "Simple tool to compress/merge css and javascript files."
     s.authors = ["Red Davis"]
-    s.files.exclude 'test/dest'
     s.test_files.exclude 'test/test_examples/robotnik'
   end
 rescue LoadError

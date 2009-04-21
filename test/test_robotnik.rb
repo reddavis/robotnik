@@ -23,7 +23,9 @@ class TestRobotnik < Test::Unit::TestCase
     @master_css_paths.each do |path|
       File.open(path) do |file|
         while line = file.gets
-          assert_no_match(/\s+/, line)
+          assert_no_match(/\s{2,}/, line)
+          assert_no_match(/\n+/, line)
+          assert_no_match(/\t+/, line)
         end
       end
     end
@@ -49,7 +51,7 @@ class TestRobotnik < Test::Unit::TestCase
                                     ]
                       })
     File.open(@master_css_paths[0]) do |file|
-      assert_match(/firstsecond/, file.gets)
+      assert_match(/#first \{color:black;\}\.second \{border:solid 1px black;\}/, file.gets)
     end
   end
   
@@ -62,7 +64,7 @@ class TestRobotnik < Test::Unit::TestCase
                       }, :stylesheet_compression => false)
 
     File.open(@master_css_paths[0]) do |file|
-      assert_match(/first\nsecond/, file.readlines.join)
+      assert_match(/#first \{\n\tcolor:black;\n\}\n.second \{border:solid 1px black;\}\n/, file.readlines.join)
     end
   end
  

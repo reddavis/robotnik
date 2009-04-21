@@ -2,3 +2,4 @@
 **/.DS_Store
 .autotest
 test/test_examples/css/robotnik
+pkg/**

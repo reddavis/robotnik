@@ -33,7 +33,7 @@ class Robotnik
           File.open(css_file) do |f| 
             f.each_line do |line| 
               if stylesheet_compression
-                file.write line.gsub(/\s+/, '')
+                file.write compress_css(line)
               else
                 file.write line
               end # if stylesheet_compressed
@@ -45,6 +45,13 @@ class Robotnik
         end # css_files.each
         
       end # File.open(master_stylesheet_name)
+    end
+    
+    def compress_css(line)
+      line.gsub!(/\n+/, '')     # Remove any newlines
+      line.gsub!(/\t+/, '')
+      line.gsub!(/\s{2,}/, ' ')   # Remove any gaps larger than 2 spaces
+      line
     end
     
     def validate_stylesheets_exists(stylesheets)
