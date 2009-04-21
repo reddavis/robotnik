@@ -1,12 +1,12 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{Robotnik}
+  s.name = %q{robotnik}
   s.version = "0.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Red Davis"]
-  s.date = %q{2009-04-21}
+  s.date = %q{2009-04-22}
   s.description = %q{Simple tool to compress/merge css and javascript files.}
   s.email = %q{reddavis@gmail.com}
   s.extra_rdoc_files = [
@@ -15,6 +15,7 @@ Gem::Specification.new do |s|
   s.files = [
     "README.textile",
     "Rakefile",
+    "Robotnik.gemspec",
     "VERSION.yml",
     "lib/robotnik.rb",
     "test/test_examples/css/first.css",
