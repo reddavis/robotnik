@@ -1,7 +1,9 @@
-begin  
-  require 'FileUtils'
-rescue LoadError
-  require 'fileutils'
+unless defined?(FileUtils)
+  begin  
+    require 'FileUtils'
+  rescue LoadError
+    require 'fileutils'
+  end
 end
 
 class Robotnik
