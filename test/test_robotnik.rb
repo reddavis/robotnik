@@ -91,7 +91,7 @@ class TestRobotnik < Test::Unit::TestCase
   def master_css_paths(stylesheets_to_compress)
     paths = []
     stylesheets_to_compress.each_key do |filename|
-      paths << "#{@options[:robotniks_path]}/robotnik/css/#{filename}.css"
+      paths << "#{@options[:robotniks_path]}/#{filename}.css"
     end
     paths
   end

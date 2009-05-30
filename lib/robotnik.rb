@@ -10,7 +10,7 @@ class Robotnik
     end
     
     def master_stylesheet_path(master_stylesheet_name)
-      "#{robotniks_path}/robotnik/css/#{master_stylesheet_name}"
+      "#{robotniks_path}/#{master_stylesheet_name}"
     end
     
     private
@@ -24,9 +24,7 @@ class Robotnik
     
     def merge_and_compress_css(master_name, stylesheets)
       validate_stylesheets_exists(stylesheets)
-            
-      create_robotniks_paths
-          
+                      
       File.open(master_stylesheet_path(master_name), 'w+') do |file|
         
         stylesheets.each do |css_file|
@@ -57,10 +55,6 @@ class Robotnik
     def validate_stylesheets_exists(stylesheets)
       stylesheets.each {|path| raise "Can't find the file #{path}" unless File.exist?(path)}
     end
-    
-    def create_robotniks_paths
-      FileUtils.mkdir_p "#{robotniks_path}/robotnik/css"
-    end
-        
+            
   end
 end
