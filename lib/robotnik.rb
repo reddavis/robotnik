@@ -1,4 +1,8 @@
-require 'FileUtils'
+begin  
+  require 'FileUtils'
+rescue LoadError
+  require 'fileutils'
+end
 
 class Robotnik
   class << self
@@ -24,7 +28,7 @@ class Robotnik
     
     def merge_and_compress_css(master_name, stylesheets)
       validate_stylesheets_exists(stylesheets)
-                      
+            
       File.open(master_stylesheet_path(master_name), 'w+') do |file|
         
         stylesheets.each do |css_file|
